@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Change one more number</title>
+    <style rel='stylesheet'>
+        body {
+            background-color: darkgreen;
+        }
+        
+        .countainer {
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        #result {
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countainer">
+        <h1>COUNTER</h1>
+        <div>
+            <div>
+                <h2 id="result">0</h2>
+            </div>
+            <button id="subtract">Lower Count</button>
+            <div>
+                <button id="addition">Add Count</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let adder = 0;
+        let carrier;
+        document.getElementById('addition').addEventListener('click', function() {
+            const test = parseInt(adder += 1);
+            carrier = document.getElementById('result').innerHTML = test;
+
+        })
+        document.getElementById('subtract').addEventListener('click', function() {
+            const test1 = carrier -= 1;
+           adder = document.getElementById('result').innerHTML = test1;
+        })
+    </script>
+</body>
